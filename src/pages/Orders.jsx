@@ -12,20 +12,22 @@ const Orders = () => {
                         {state?.orders?.map((order) => (
                             <div key={order.orderId} className='border border-2 p-3 mb-3'>
                                 <h3>訂單編號：{order.orderId}</h3>
-                                <h4>
-                                    訂單狀態：{' '}
+                                <h4>訂單備註：{order.message}</h4>
+                                <h5>
+                                    訂單狀態：
                                     {order.isPaid ? (
                                         <span className='text-success'>已付款</span>
                                     ) : (
                                         <button
                                             type='button'
-                                            className='btn btn-dark'
+                                            className='btn btn-dark btn-sm'
                                             onClick={() => handleUpdateOrder(order)}
                                         >
                                             結帳
                                         </button>
                                     )}
-                                </h4>
+                                </h5>
+
                                 <table className='table'>
                                     <thead>
                                         <tr>

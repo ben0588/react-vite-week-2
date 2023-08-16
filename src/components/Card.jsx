@@ -40,7 +40,7 @@ const Card = ({ product }) => {
                 </div>
                 <button
                     type={'button'}
-                    className='btn btn-outline-dark w-100 btn-sm'
+                    className='btn btn-outline-dark w-100 btn-sm mt-2'
                     onClick={() => handleAddToCart({ ...product, quantity: quantity })}
                 >
                     新增商品
